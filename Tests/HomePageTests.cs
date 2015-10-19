@@ -30,12 +30,11 @@ namespace Tests
                 Assert.That(browser, Shows.Content("My Account"));
 
                 // Test the menu on the home page
-                var financeLink = browser.FindLink("Finance");
                 Assert.That(browser, Shows.No.Content("Financial News"), "Financial News link should be hidden on home page");
                 Assert.That(browser, Shows.No.Content("Financial Planning"), "Financial Planning link should be hidden on home page");
 
                 // Test hovering over a menu with children
-                financeLink.Hover();
+                browser.FindLink("Finance").Hover();
                 Assert.That(browser, Shows.Content("Financial News"), "Financial News link should be visible on hover");
                 Assert.That(browser, Shows.Content("Financial Planning"), "Financial Planning link should be visible on hover");
             });
