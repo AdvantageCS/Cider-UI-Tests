@@ -1,6 +1,6 @@
 ﻿{
     "commands": {
-        "test": "xunit.runner.dnx"
+        "test": "xunit.runner.dnx -verbose"
     },
 
     "dependencies": {
